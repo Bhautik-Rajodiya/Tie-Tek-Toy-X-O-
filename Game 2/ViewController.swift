@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        allButton.forEach { i in
+            i.layer.borderWidth = 5
+            i.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        }
     }
     
     @IBAction func allButtonAction(_ sender: UIButton) {
@@ -22,6 +27,9 @@ class ViewController: UIViewController {
             data[sender.tag] = cross
             sender.setTitle(cross, for: .normal)
             curantCross = false
+            allButton.forEach { i in
+                i.tintColor = .red
+            }
             print(data)
         }
         else
