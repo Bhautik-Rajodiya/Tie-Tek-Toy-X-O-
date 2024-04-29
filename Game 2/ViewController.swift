@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK : LOGIC
+    
+    
     @IBAction func allButtonAction(_ sender: UIButton) {
         //TODO: Handle OddEven Turn
         
